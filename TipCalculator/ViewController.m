@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipControl;
 @property (weak, nonatomic) IBOutlet UILabel *tipWord;
 @property double tipPercentage;
+@property (nonatomic,assign) NSUInteger index;
 @end
 
 @implementation ViewController
@@ -35,16 +36,21 @@
     [self.billField becomeFirstResponder];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    self.tipPercentage = [defaults doubleForKey:@"defaultTip"];
+    self.index = [defaults doubleForKey:@"defaultTip"];
+    NSArray *percentages = @[@(0.15), @(0.18), @(0.20)];
+    self.tipPercentage = [percentages[self.index] doubleValue];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    self.tipPercentage = [defaults doubleForKey:@"defaultTip"];
+    self.index = [defaults doubleForKey:@"defaultTip"];
+    
+    NSArray *percentages = @[@(0.15), @(0.18), @(0.20)];
+    self.tipPercentage = [percentages[self.index] doubleValue];
     double bill = [self.billField.text doubleValue];
     double tip = self.tipPercentage * bill;
     double total = bill + tip;
-    NSLog(@"$%.2f", tip);
+//    NSLog(@"$%.2f", tip);
     NSLog(@"$%.2f", self.tipPercentage);
     self.tipLabel.text = [NSString stringWithFormat:@"$%.2f", tip];
     self.totalLabel.text = [NSString stringWithFormat:@"$%.2f", total];

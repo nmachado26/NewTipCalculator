@@ -138,13 +138,22 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.7550493157" green="0.86649746059999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="JfG-vh-YQ9"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Igx-NZ-gqR" appends="YES" id="5ZO-Xg-75i"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="defaultTipControl" destination="cqb-4r-GYf" id="ijM-V2-sd9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SnM-Vb-ynq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Igx-NZ-gqR">
+                    <connections>
+                        <action selector="tapView:" destination="rgr-Jn-toB" id="S5w-6w-RRK"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1690" y="127"/>
         </scene>

@@ -26,11 +26,20 @@
 }
 
 - (IBAction)editChanged:(id)sender {
-    NSArray *percentages = @[@(0.15), @(0.18), @(0.20)];
+//    NSArray *percentages = @[@(0.15), @(0.18), @(0.20)];
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    [defaults setInteger:self.defaultTipControl.selectedSegmentIndex forKey:@"defaultTip"];
+//    [defaults synchronize];
+    
+}
+
+- (IBAction)tapView:(id)sender {
+    [self.view endEditing:YES];
+    NSLog(@"tap");
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger:self.defaultTipControl.selectedSegmentIndex forKey:@"defaultTip"];
     [defaults synchronize];
-    
+    NSLog(@"$%.2ld", (long)self.defaultTipControl.selectedSegmentIndex);
 }
 
 /*
