@@ -28,7 +28,7 @@
 - (IBAction)editChanged:(id)sender {
     NSArray *percentages = @[@(0.15), @(0.18), @(0.20)];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setDouble:[percentages[self.defaultTipControl.selectedSegmentIndex] doubleValue] forKey:@"defaultTip"];
+    [defaults setInteger:self.defaultTipControl.selectedSegmentIndex forKey:@"defaultTip"];
     [defaults synchronize];
     
 }

@@ -44,6 +44,8 @@
     double bill = [self.billField.text doubleValue];
     double tip = self.tipPercentage * bill;
     double total = bill + tip;
+    NSLog(@"$%.2f", tip);
+    NSLog(@"$%.2f", self.tipPercentage);
     self.tipLabel.text = [NSString stringWithFormat:@"$%.2f", tip];
     self.totalLabel.text = [NSString stringWithFormat:@"$%.2f", total];
 }
