@@ -15,6 +15,7 @@
 		4D88CD0120E2D562009026D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88CD0020E2D562009026D8 /* main.m */; };
 		4D88CD0B20E2D562009026D8 /* TipCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88CD0A20E2D562009026D8 /* TipCalculatorTests.m */; };
 		4D88CD1620E2D562009026D8 /* TipCalculatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88CD1520E2D562009026D8 /* TipCalculatorUITests.m */; };
+		4D88CD2520E2FBCF009026D8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88CD2420E2FBCF009026D8 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		4D88CD1120E2D562009026D8 /* TipCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D88CD1520E2D562009026D8 /* TipCalculatorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipCalculatorUITests.m; sourceTree = "<group>"; };
 		4D88CD1720E2D562009026D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D88CD2320E2FBCF009026D8 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		4D88CD2420E2FBCF009026D8 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				4D88CCF220E2D561009026D8 /* AppDelegate.m */,
 				4D88CCF420E2D561009026D8 /* ViewController.h */,
 				4D88CCF520E2D561009026D8 /* ViewController.m */,
+				4D88CD2320E2FBCF009026D8 /* SettingsViewController.h */,
+				4D88CD2420E2FBCF009026D8 /* SettingsViewController.m */,
 				4D88CCF720E2D561009026D8 /* Main.storyboard */,
 				4D88CCFA20E2D562009026D8 /* Assets.xcassets */,
 				4D88CCFC20E2D562009026D8 /* LaunchScreen.storyboard */,
@@ -265,6 +270,7 @@
 				4D88CCF620E2D561009026D8 /* ViewController.m in Sources */,
 				4D88CD0120E2D562009026D8 /* main.m in Sources */,
 				4D88CCF320E2D561009026D8 /* AppDelegate.m in Sources */,
+				4D88CD2520E2FBCF009026D8 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +446,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.TipCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicolasmachado.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -457,7 +463,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.TipCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicolasmachado.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
